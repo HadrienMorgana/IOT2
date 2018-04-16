@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block titre %}
+    Acceuil
+{% endblock %}
+
+{%block body%}
+	<h1>Liste des sites</h1>
+	<a href="{{ url_for('login') }}">Connexion</a>
+	<ul>
+		{% for name in names %}
+			<li>nom : {{ name }}</li>
+		{% endfor %}
+	</ul>
+{%endblock%}
